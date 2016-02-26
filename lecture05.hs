@@ -8,7 +8,7 @@ main = runLecture [
 	[flip writeTitle subtitle], prelude, makenai, maketeiru,
 	whats, whats2, ikkiichiyuu, shiya, shiya2,
 	jisonshin, tanin,
-	dousureba, shiyawo, jisonshinwo, taninwo, summary
+	dousureba, shiyawo, jisonshinwo, taninwo, sports, summary
 	]
 
 prelude :: Page
@@ -202,6 +202,18 @@ taninwo = [\t -> do
 	text t "", \t -> do
 	text t "* 人の「いいところ」を見つけよう", \t -> do
 	text t "* 他の人が心地良くいられる方法を考える"
+	]
+
+sports :: Page
+sports = [\t -> do
+	writeTopTitle t "スポーツ"
+	text t "", \t -> do
+	text t "* スポーツをするのも良い", \t -> do
+	text t "* 精一杯がんばれば", \t -> do
+	itext t 1 "- 勝てば自信がつく", \t -> do
+	itext t 1 "- 負ければ立ち直りかたを学べる", \t -> do
+	text t "* 「努力」しないで言い訳をしてしまうと意味がない", \t -> do
+	text t "* 自分のできる最善をつくすことが大事"
 	]
 
 summary :: Page
