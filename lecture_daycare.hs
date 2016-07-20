@@ -33,10 +33,7 @@ aspergerAndAdhd = [ \t -> do
 	writeTopTitle t "アスペルガー症候群とADHD"
 	text t "", \t -> do
 	text t "* アスペルガー症候群とADHDは合併することが多い", \t -> do
-	text t "* 合併でなくても類似した特徴がみられる", \t -> do
-	text t "* 別々の疾患(特徴)なのか", \t -> do
-	text t "* おなじ疾患(特徴)のふたつの側面なのか", \t -> do
-	text t "* さまざまな立場をとる人がいる"
+	text t "* 合併でなくても類似した特徴がみられる"
 	]
 
 whatsAdhd :: Page
@@ -60,8 +57,8 @@ adhdTherapy = [ \t -> do
 	writeTopTitle t "ADHDの治療"
 	text t "", \t -> do
 	text t "* ADHDの鑑別は重要", \t -> do
-	text t "* 特効薬がある", \t -> do
-	text t "* ただし、ADHDでない人には投与してはいけない", \t -> do
+	text t "* なぜなら、特効薬があり", \t -> do
+	text t "* ADHDでない人には投与してはいけないから", \t -> do
 	text t "* 効果が覚醒剤に類似しているところがある", \t -> do
 	text t "* 濫用に注意が必要"
 	]
@@ -72,7 +69,6 @@ whatsAsperger = [ \t -> do
 	text t "", \t -> do
 	text t "* 社会的な関係に困難を感じる", \t -> do
 	text t "* さきが見通せないことに不安を感じる", \t -> do
-	text t "* アスペルガー症候群の人はこのような特徴をもつ", \t -> do
 	text t "* 社交的な場で場ちがいなことを言ってしまう", \t -> do
 	text t "* いつ終わるのかわからない会議に苦痛を感じる", \t -> do
 	text t "* 暗黙の了解というものがわからない"
@@ -83,8 +79,8 @@ howToPrelude = [ \t -> do
 	writeTopTitle t "接しかた:ADHDとアスペルガ症候群"
 	text t ""
 	text t "* ふたつの疾患(特徴)は合併することが多い", \t -> do
-	text t "* 理由はちがっても、どちらもおなじような反応を示すことも", \t -> do
-	text t "* たいていは、どちらかに有効なものは他方にも有効である"
+	text t "* 理由はちがっても、おなじような反応を示すことも", \t -> do
+	text t "* たいていは、どちらかに有効な接しかたは他方にも有効"
 	]
 
 howToAdhd :: Page
@@ -157,12 +153,10 @@ separate :: Page
 separate = [ \t -> do
 	writeTopTitle t "人それぞれ"
 	text t "", \t -> do
-	text t "* アスペルガー症候群の人にもいろいろな人がいる", \t -> do
-	text t "* 定型発達者にもいろいろな人がいる", \t -> do
-	text t "* 聖人もいれば犯罪者もいる", \t -> do
-	text t "* 会社の社長もいれば、労働者もいる", \t -> do
-	text t "* 定型発達者むけにカスタマイズされた社会のなかで", \t -> do
-	text t "* アスペルガー症候群の人は不利益を被っている、という視点", \t -> do
-	text t "* また、ハンディをなくすことで、才能を発揮させることで", \t -> do
+	text t "* 定型発達者にもいろいろな性格があるように", \t -> do
+	itext t 1 "アスペルガー症候群の人にもいろいろな人がいる", \t -> do
+	text t "* 定型発達者が生活しやすい社会は、うらをかえせば", \t -> do
+	text t "* アスペルガー症候群の人たちには生活しにくいという視点", \t -> do
+	text t "* また、ハンディをなくして、才能を発揮させることで", \t -> do
 	itext t 1 "社会的な利益にもなるという視点"
 	]
