@@ -6,7 +6,8 @@ subtitle = "第9回 アルツハイマー型認知症"
 main :: IO ()
 main = runLecture [
 	[flip writeTitle subtitle], prelude, whatsDementia,
-	differenceBetweenAging, classification, course, course2, course3
+	differenceBetweenAging, classification, course, course2, course3,
+	cause, prevention, treatment, accept, summary
 	]
 
 prelude :: Page
@@ -104,4 +105,70 @@ course3 = [ \t -> do
 	itext t 1 "- まったく会話が通じない", \t -> do
 	itext t 1 "- 寝たきりになる", \t -> do
 	itext t 1 "- 尿や便の失禁"
+	]
+
+cause :: Page
+cause = [ \t -> do
+	writeTopTitle t "アルツハイマー型認知症の原因"
+	text t "", \t -> do
+	text t "* 脳の神経細胞のあいだにアミロイドβタンパクがたまる", \t -> do
+	text t "* アミロイドβタンパクによって神経細胞が死ぬ", \t -> do
+	text t "* 神経細胞のなかにはタウタンパクがたまる", \t -> do
+	text t "* タウタンパクによって神経細胞が死ぬ", \t -> do
+	itext t 1 "かんたんに言うと"
+	dvArrow t, \t -> do
+	text t "神経細胞のまわりにも、なかにも、ごみがたまり", \t -> do
+	itext t 1 "そのごみによって神経細胞が死ぬ、ということ"
+	]
+
+prevention :: Page
+prevention = [ \t -> do
+	writeTopTitle t "アルツハイマー型認知症の予防"
+	text t "", \t -> do
+	text t "* もちろん、完全に予防することはできない", \t -> do
+	text t "* アミロイドβタンパクやタウタンパクは自然にたまる", \t -> do
+	text t "* かかりにくくすることはできる", \t -> do
+	text t "* 高脂血症、肥満、高血圧、糖尿病が危険因子", \t -> do
+	text t "* とくに、糖尿病で発症リスクが2倍になる"
+	]
+
+treatment :: Page
+treatment = [ \t -> do
+	writeTopTitle t "アルツハイマー型認知症の治療"
+	text t "", \t -> do
+	text t "* 薬で、あるていど認知機能を改善することができることも", \t -> do
+	text t "* 基本的には対症療法", \t -> do
+	text t "* 残った機能を活用する", \t -> do
+	text t "* 問題行動を減らしていく", \t -> do
+	dvArrow t
+	text t "本人や周囲の人たちの苦痛を減らしていくことが大切"
+	]
+
+accept :: Page
+accept = [ \t -> do
+	writeTopTitle t "認知症を受け入れる"
+	text t "", \t -> do
+	text t "* 認知症は、予防も治療も難しい", \t -> do
+	text t "* 人間はいつか、かならず死ぬ", \t -> do
+	text t "* 「生老病死」と言うように、人は", \t -> do
+	itext t 1 "生きて老いて病んで死ぬ", \t -> do
+	text t "* それぞれの人生のステージを", \t -> do
+	itext t 1 "それなりに生きていくことが大切", \t -> do
+	text t "* 幼いころには幼いなりの", \t -> do
+	text t "* 若いころには若いなりの", \t -> do
+	text t "* 病気のときには病気なりの", \t -> do
+	text t "* 老いたときには老いたときなりの", \t -> do
+	text t "* それぞれの生きかたがあるということ"
+	]
+
+summary :: Page
+summary = [ \t -> do
+	writeTopTitle t "まとめ"
+	text t "", \t -> do
+	text t "* 認知症は、さまざまな精神的な能力が低下する病気", \t -> do
+	text t "* 最も多いのがアルツハイマー型認知症", \t -> do
+	text t "* 脳の神経細胞のまわりや、なかにゴミがたまる", \t -> do
+	text t "* 予防や治療は難しい", \t -> do
+	text t "* 本人や周囲の苦痛を減らしていくことが大切", \t -> do
+	text t "* 究極的には、受け入れるしかない"
 	]
