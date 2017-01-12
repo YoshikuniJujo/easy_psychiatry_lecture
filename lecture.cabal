@@ -7,3 +7,11 @@ cabal-version: >= 1.2
 executable lecture08
     main-is: lecture08.hs
     build-depends: base, yjsvg, random, xturtle
+    ghc-options: -Wall -fno-warn-tabs
+    other-modules: Lecture, WriteTree
+
+executable lecture09
+    main-is: lecture09.hs
+    build-depends: base, yjsvg, random, xturtle
+    ghc-options: -Wall -fno-warn-tabs
+    other-modules: Lecture, WriteTree
