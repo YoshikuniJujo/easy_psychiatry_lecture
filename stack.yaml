@@ -1,0 +1,18 @@
+# This is the implicit global project's config file, which is only used when
+# 'stack' is run outside of a real project.  Settings here do _not_ act as
+# defaults for all projects.  To change stack's default settings, edit
+# '/home/tatsuya/.stack/config.yaml' instead.
+#
+# For more information about stack's configuration, see
+# http://docs.haskellstack.org/en/stable/yaml_configuration/
+#
+extra-deps:
+        - yjsvg-0.1.18
+        - xturtle-0.1.25
+        - Imlib-0.1.2
+        - X11-xft-0.3.1
+        - x11-xim-0.0.9.0
+resolver: lts-6.3
+flags: {}
+extra-package-dbs: []
+packages: ['.']
