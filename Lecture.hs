@@ -1,3 +1,5 @@
+{-# LANGUAGE TupleSections #-}
+
 module Lecture (
 	Page,
 	runLecture,
@@ -21,7 +23,6 @@ module Lecture (
 import Graphics.X11.Turtle
 import Text.XML.YJSVG hiding (topleft, fontName)
 import Control.Monad
-import Control.Applicative
 import Data.IORef
 import Data.Char
 import Data.List
@@ -120,7 +121,8 @@ runLecture pgs = do
 						case fn of
 							Just f -> writeFile f $
 								showSVG width
-									height svg
+									height
+									$ map ("" ,) svg
 							_ -> return ()
 						modifyIORef pagesRef tail
 						return True
