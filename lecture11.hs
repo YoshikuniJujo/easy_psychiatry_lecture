@@ -32,30 +32,66 @@ whatsSz1 = [ \t -> do
 	text t "エミール・クレペリンという人が"
 	itext t 1 "「早発性痴呆」という病名をつける", \t -> do
 	text t "オイゲン・ブロイラーという人が"
-	itext t 1 "「Schizophrenia」という病名をつける"
+	itext t 1 "「Schizophrenia」という病名をつける", \t -> do
+	text t "日本では長く「精神分裂病」と呼ばれていたが"
+	itext t 1 "2002年に「統合失調症」と訳語が変更された"
 	]
 
 whatsSz2 :: Page
 whatsSz2 = [ \t -> do
 	writeTopTitle t "統合失調症の症状"
+	text t "", \t -> do
+	text t "統合失調症の症状は、大きくわけて、つぎのふたつ", \t -> do
+	itext t 1 "* 陽性症状", \t -> do
+	itext t 1 "* 陰性症状", \t -> do
+	text t "かんたんに言うと、ハデな症状が陽性症状", \t -> do
+	text t "ジミな症状が陰性症状"
 	]
 
 whatsSz3 :: Page
 whatsSz3 = [ \t -> do
-	writeTopTitle t "統合失調症の幻覚・妄想の種類"
+	writeTopTitle t "統合失調症の陽性症状"
+	text t "", \t -> do
+	text t "陽性症状には、つぎのものがある", \t -> do
+	itext t 1 "* 思考の障害", \t -> do
+	itext t 1 "* 知覚の障害", \t -> do
+	itext t 1 "* 自我意識の障害"
 	]
 
 whatsSz4 :: Page
 whatsSz4 = [ \t -> do
-	writeTopTitle t "統合失調症と、その他の精神疾患"
+	writeTopTitle t "統合失調症の陰性症状"
+	text t "", \t -> do
+	text t "陰性症状には、つぎのものがある", \t -> do
+	itext t 1 "* 感情の障害", \t -> do
+	itext t 1 "* 思考の障害", \t -> do
+	itext t 1 "* 意志・欲望の障害"
 	]
 
 whatsSz5 :: Page
 whatsSz5 = [ \t -> do
-	writeTopTitle t "統合失調症の症例1"
+	writeTopTitle t "妄想の種類"
+	text t "", \t -> do
+	text t "妄想には、つぎのようなものがある", \t -> do
+	itext t 1 "* 被害妄想", \t -> do
+	itext t 1 "* 関係妄想", \t -> do
+	itext t 1 "* 注察妄想", \t -> do
+	itext t 1 "* 追跡妄想", \t -> do
+	itext t 1 "* 心気妄想", \t -> do
+	itext t 1 "* 誇大妄想", \t -> do
+	itext t 1 "* 被毒妄想", \t -> do
+	itext t 1 "* 家族否認妄想", \t -> do
+	itext t 1 "* 物理的被影響妄想", \t -> do
+	itext t 2 "などなど"
 	]
 
 whatsSz6 :: Page
 whatsSz6 = [ \t -> do
-	writeTopTitle t "統合失調症の症例2"
+	writeTopTitle t "幻覚・妄想の実例"
+	text t "", \t -> do
+	text t "黒服を着た男に監視されている", \t -> do
+	text t "体に盗聴器をうめこまれている", \t -> do
+	text t "食べものに毒が入れられている", \t -> do
+	text t "この人は母親じゃない、誰かが母親のふりをしている", \t -> do
+	itext t 1 "などなど"
 	]
