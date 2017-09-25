@@ -6,7 +6,9 @@ subtitle = "2017年 9月27日 第11回 統合失調症の薬物療法"
 main :: IO ()
 main = runLecture [
 	[flip writeTitle subtitle], prelude,
-	whatsSz1, whatsSz2, whatsSz3, whatsSz4, whatsSz5, whatsSz6
+	whatsSz1, whatsSz2, whatsSz3, whatsSz4, whatsSz5, whatsSz6,
+	rekishi1, rekishi2, rekishi3,
+	ichiduke1, ichiduke2, ichiduke3
 	]
 
 prelude :: Page
@@ -15,10 +17,11 @@ prelude = [ \t -> do
 	text t "", \t -> do
 	text t "統合失調症の薬物療法について話す", \t -> do
 	text t "1. まずは、「統合失調症とはなにか」のおさらい", \t -> do
-	text t "2. 薬物療法の位置づけ", \t -> do
-	text t "3. 抗精神病薬が、どのように効くのかの仮説", \t -> do
-	text t "4. 薬物療法が、なぜ必要か", \t -> do
-	text t "5. 自己判断で中止することの危険性", \t -> do
+	text t "2. 薬物療法の歴史", \t -> do
+	text t "3. 薬物療法の位置づけ", \t -> do
+	text t "4. 抗精神病薬が、どのように効くのかの仮説", \t -> do
+	text t "5. 薬物療法が、なぜ必要か", \t -> do
+	text t "6. 自己判断で中止することの危険性", \t -> do
 	itext t 4 "の順に話す"
 	]
 
@@ -94,4 +97,47 @@ whatsSz6 = [ \t -> do
 	text t "食べものに毒が入れられている", \t -> do
 	text t "この人は母親じゃない、誰かが母親のふりをしている", \t -> do
 	itext t 1 "などなど"
+	]
+
+rekishi1 :: Page
+rekishi1 = [ \t -> do
+	writeTopTitle t "薬物療法の歴史"
+	text t "", \t -> do
+	text t "1950年代にクロルプロマジンが合成される", \t -> do
+	text t "1957年にハロペリドールの開発", \t -> do
+	itext t 1 "ハロペリドールはクロルプロマジンの50倍の力価", \t -> do
+	itext t 1 "幻覚妄想への効果が高い", \t -> do
+	text t "これらは第一世代の抗精神病薬と呼ばれる", \t -> do
+	text t "錐体外路症状を起こしやすい", \t -> do
+	itext t 1 "手のふるえ、こわばりなど"
+	]
+
+rekishi2 :: Page
+rekishi2 = [ \t -> do
+	writeTopTitle t "薬物療法の歴史"
+	text t ""
+	]
+
+rekishi3 :: Page
+rekishi3 = [ \t -> do
+	writeTopTitle t "薬物療法の歴史"
+	text t ""
+	]
+
+ichiduke1 :: Page
+ichiduke1 = [ \t -> do
+	writeTopTitle t "薬物療法の位置づけ"
+	text t ""
+	]
+
+ichiduke2 :: Page
+ichiduke2 = [ \t -> do
+	writeTopTitle t "薬物療法の位置づけ"
+	text t ""
+	]
+
+ichiduke3 :: Page
+ichiduke3 = [ \t -> do
+	writeTopTitle t "薬物療法の位置づけ"
+	text t ""
 	]
