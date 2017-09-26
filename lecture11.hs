@@ -7,8 +7,12 @@ main :: IO ()
 main = runLecture [
 	[flip writeTitle subtitle], prelude,
 	whatsSz1, whatsSz2, whatsSz3, whatsSz4, whatsSz5, whatsSz6,
-	rekishi1, rekishi2, rekishi3,
-	ichiduke1, ichiduke2, ichiduke3
+	rekishi1, rekishi2,
+	ichiduke1, ichiduke2,
+	how1,
+	why1, why2,
+	chuudan1,
+	summary
 	]
 
 prelude :: Page
@@ -115,29 +119,98 @@ rekishi1 = [ \t -> do
 rekishi2 :: Page
 rekishi2 = [ \t -> do
 	writeTopTitle t "薬物療法の歴史"
-	text t ""
-	]
-
-rekishi3 :: Page
-rekishi3 = [ \t -> do
-	writeTopTitle t "薬物療法の歴史"
-	text t ""
+	text t "", \t -> do
+	text t "1971年に錐体外路症状のすくないクロザピンが開発される", \t -> do
+	itext t 1 "致死的な副作用である無顆粒球症が報告され生産停止に", \t -> do
+	text t "1990年代には、錐体外路症状のすくない新しい抗精神病薬が", \t -> do
+	itext t 1 "つぎつぎと開発される", \t -> do
+	itext t 1 "この時期に開発された抗精神病薬が第2世代抗精神病薬", \t -> do
+	itext t 2 "リスペリドン", \t -> do
+	itext t 2 "オランザピン", \t -> do
+	itext t 2 "アリピプラゾール"
 	]
 
 ichiduke1 :: Page
 ichiduke1 = [ \t -> do
 	writeTopTitle t "薬物療法の位置づけ"
-	text t ""
+	text t "", \t -> do
+	text t "統合失調症の治療は薬物療法だけではない", \t -> do
+	text t "統合失調症を治療するためには", \t -> do
+	itext t 1 "心理的なアプローチや",  \t -> do
+	itext t 1 "福祉的なアプローチも", \t -> do
+	text t "しかし、それらのアプローチを可能にするためにも", \t -> do
+	itext t 1 "薬物療法は重要なものになる"
 	]
 
 ichiduke2 :: Page
 ichiduke2 = [ \t -> do
 	writeTopTitle t "薬物療法の位置づけ"
-	text t ""
+	text t "", \t -> do
+	text t "心理的なアプローチとして", \t -> do
+	itext t 1 "幻覚や妄想とのつきあいかたを学ぶとしても", \t -> do
+	text t "幻覚・妄想に心がとらわれていては、うまくいかない", \t -> do
+	text t "福祉的なアプローチとして", \t -> do
+	itext t 1 "就職の支援を行う場合にも", \t -> do
+	text t "やはり、服薬によって症状をコントロールする必要がある"
 	]
 
-ichiduke3 :: Page
-ichiduke3 = [ \t -> do
-	writeTopTitle t "薬物療法の位置づけ"
-	text t ""
+how1 :: Page
+how1 = [ \t -> do
+	writeTopTitle t "どのように効くか"
+	text t "", \t -> do
+	text t "統合失調症の原因のひとつとして", \t -> do
+	itext t 1 "ドーパミンの分泌が過剰がある、という仮説がある", \t -> do
+	text t "これを「ドーパミン仮説」とよぶ", \t -> do
+	text t "抗精神病薬はドーパミンの受容体にくっついて", \t -> do
+	itext t 1 "ドーパミンの作用を阻害する"
+	]
+
+why1 :: Page
+why1 = [ \t -> do
+	writeTopTitle t "なぜ必要か"
+	text t "", \t -> do
+	text t "統合失調症と診断されたら、抗精神病薬が必要", \t -> do
+	text t "そうでないと、本来の自分ならしないようなことをしてしまう", \t -> do
+	itext t 1 "被害妄想によって、不安になり攻撃的になったり", \t -> do
+	itext t 1 "幻聴に左右されて、犯罪行為を行ってしまったり", \t -> do
+	text t "幻覚・妄想をしっかりとおさえることが大切", \t -> do
+	itext t 1 "自分を守るためにも", \t -> do
+	itext t 1 "家族など周囲の人を守るためにも"
+	]
+
+why2 :: Page
+why2 = [ \t -> do
+	writeTopTitle t "なぜ必要か"
+	text t "", \t -> do
+	text t "抗精神病薬の使用により、自分らしく行動できる", \t -> do
+	text t "思考や感覚がゆがめられることなく", \t -> do
+	itext t 1 "本来の自分として行動できる", \t -> do
+	text t "薬が必要ということを理解して、内服などを継続できるのも", \t -> do
+	itext t 1 "薬によって症状を軽減させているおかげ"
+	]
+
+chuudan1 :: Page
+chuudan1 = [ \t -> do
+	writeTopTitle t "自己判断でやめることの危険性"
+	text t "", \t -> do
+	text t "「もう治ったから」「もともと病気じゃないから」",  \t -> do
+	text t "「副作用が気になるから」など", \t -> do
+	text t "そのように感じても、薬を自己判断でやめるのは避けよう", \t -> do
+	text t "きちんと主治医と相談する", \t -> do
+	text t "症状が再発してしまうと", \t -> do
+	itext t 1 "攻撃的になる", \t -> do
+	itext t 1 "好ましくないことをしてしまう", \t -> do
+	itext t 1 "薬の必要性がわからなくなる"
+	]
+
+summary :: Page
+summary = [ \t -> do
+	writeTopTitle t "まとめ"
+	text t "", \t -> do
+	text t "* 統合失調症は、幻覚や妄想が生じ、やる気をなくす病気", \t -> do
+	text t "* 抗精神病薬は統合失調症の症状をおさえる", \t -> do
+	text t "* 抗精神病薬は、進化して副作用が低減した", \t -> do
+	text t "* 自分や周囲を守り、自分らしく行動するために", \t -> do
+	itext t 1 "薬をのみつづけよう", \t -> do
+	text t "* 自己判断で薬をやめてはいけない"
 	]
