@@ -107,7 +107,7 @@ rekishi1 :: Page
 rekishi1 = [ \t -> do
 	writeTopTitle t "薬物療法の歴史"
 	text t "", \t -> do
-	text t "1950年代にクロルプロマジンが合成される", \t -> do
+	text t "1952年にクロルプロマジンが発見される", \t -> do
 	text t "1957年にハロペリドールの開発", \t -> do
 	itext t 1 "ハロペリドールはクロルプロマジンの50倍の力価", \t -> do
 	itext t 1 "幻覚妄想への効果が高い", \t -> do
