@@ -33,3 +33,9 @@ executable lecture12
     build-depends: base, yjsvg, random, xturtle
     ghc-options: -Wall -fno-warn-tabs
     other-modules: Lecture, WriteTree
+
+executable lecture13
+    main-is: lecture13.hs
+    build-depends: base, yjsvg, random, xturtle
+    ghc-options: -Wall -fno-warn-tabs
+    other-modules: Lecture, WriteTree
